@@ -1,0 +1,25 @@
+<div id="clock"></div>
+
+<style>    #clock {        
+display: inline-block;        
+padding: 12px 20px;        
+background: #222;        
+color: white;        
+border-radius: 12px;       
+font-family: "Poppins", "Montserrat", sans-serif; 
+font-size: 2rem;        
+letter-spacing: 1px;        
+text-align: center;        
+min-width: 150px;    
+}
+</style>
+
+<script>    
+function updateClock() {        
+const clock = document.getElementById("clock");        
+const now = new Date();        
+clock.textContent = now.toLocaleTimeString("pt-BR");    
+}
+    setInterval(updateClock, 1000);    
+    updateClock();
+    </script>
